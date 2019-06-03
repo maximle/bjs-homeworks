@@ -22,8 +22,9 @@ function checkBirthday(birthday) {
       k = k + 1;
     };
   };
-  let age = diff/3.6e+6 / 24 + k;
+  let age = diff/3.6e+6 / 24 - k;
   console.log(k);
+  
   age = (age - age % 365) / 365;
   console.log(age, 'asd');
   let result = age > 18;
