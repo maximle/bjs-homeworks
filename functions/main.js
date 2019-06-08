@@ -68,30 +68,31 @@ console.log(getAverageScore(grades));
 
 function getPersonData(secretData) {
   let names = {};
-  for (let prop in secretData) {
-    let value = secretData[prop];    
-    if (prop === "aaa") {
-      names.firstName = "";
-      if (value === 0) {
-        names.firstName = "Родриго";
-      } else if (value === 1) {
-        names.firstName = "Эмильо";
-      }
-    } else if (prop === "bbb") {
-      names.lastName = "";
-      if (value === 0) {
-        names.lastName = "Родриго";
-      } else if (value === 1) {
-        names.lastName = "Эмильо";
-      };
+  let namesArr = [];
+  for (let key in secretData) {
+    let value = secretData[key];    
+    let name = "";
+    if (value === 0) {
+      name = "Родриго";
+    } else if (value === 1) {
+      name = "Эмильо";
     };
-  };  
+    namesArr.push(name);  
+  };
+  names.firstName = "";
+  names.lastname = "";
+  i = 0;
+  for (let key in names) {
+    names[key] = namesArr[i];
+    i++
+  };
   return names; 
-};
+};  
+
 
 let asd = {
   "aaa": 0,
-  "bbb": 0
+  "bbb": 1
 };
 
 console.log(getPersonData(asd));
