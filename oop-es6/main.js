@@ -102,16 +102,93 @@ console.log(bow.isBroken());
 
 
 class Bow extends Weapon {
-  constructor(bow) {
-    super(bow);
+  constructor(obj) {
+    super(obj);
+    
+  };
+};
+const bow1 = new Bow(bow);
+
+console.log(bow1.name); // Лук
+console.log(bow1.attack); // 10
+console.log(bow1.durability); // 200
+console.log(bow1.range); // 3
+
+console.log(bow1.getDamage());
+console.log(bow1.isBroken());
+bow1.takeDamage(20);
+console.log(bow1.isBroken());
+
+class Arm extends Weapon {
+  constructor(obj) {
+    super(obj);
     
   };
 };
 
-const bow1 = new Bow();
-//const bow = new Bow();
-//console.log(bow.name); // Лук
-console.log(bow1.name); // Лук
-// console.log(bow1.attack); // 10
-// console.log(bow1.durability); // 200
-// console.log(bow1.range); // 3
+const arm1 = new Arm(arm);
+
+class Sword extends Weapon {
+  constructor(obj) {
+    super(obj);
+    
+  };
+};
+
+const sword1 = new Sword(sword);
+
+class Knife extends Weapon {
+  constructor(obj) {
+    super(obj);
+    
+  };
+};
+
+const knife1 = new Knife(knife);
+
+class Wand extends Weapon {
+  constructor(obj) {
+    super(obj);
+    
+  };
+};
+
+const wand1 = new Wand(wand);
+
+class LongBow extends Weapon {
+  constructor(obj) {
+    super(obj);
+    this.attack = 15;
+    this.range = 4;
+  };
+};
+
+const longbow1 = new LongBow(bow);
+
+class Axe extends Weapon {
+  constructor(obj) {
+    super(obj);
+    this.attack = 27;
+    this.durability = 800;
+  };
+};
+
+const axe1 = new Axe(sword);
+
+class StormWand extends Weapon {
+  constructor(obj) {
+    super(obj);
+    this.attack = 10;
+    this.range = 3;
+  };
+};
+
+const stormwand1 = new StormWand(wand);
+
+
+console.log(stormwand1.attack);
+console.log(stormwand1.getDamage());
+console.log(stormwand1.isBroken());
+stormwand1.takeDamage(20);
+console.log(stormwand1.durability);
+console.log(stormwand1.isBroken());
