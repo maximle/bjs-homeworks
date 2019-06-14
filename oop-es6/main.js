@@ -158,6 +158,7 @@ const wand1 = new Wand(wand);
 class LongBow extends Bow {
   constructor(obj) {
     super(obj);
+    this.name = 'Длинный лук';
     this.attack = 15;
     this.range = 4;
   };
@@ -168,6 +169,7 @@ const longbow1 = new LongBow(bow);
 class Axe extends Sword {
   constructor(obj) {
     super(obj);
+    this.name = 'Секира';
     this.attack = 27;
     this.durability = 800;
   };
@@ -178,6 +180,7 @@ const axe1 = new Axe(sword);
 class StormWand extends Wand {
   constructor(obj) {
     super(obj);
+    this.name = 'Посох бури';
     this.attack = 10;
     this.range = 3;
   };
