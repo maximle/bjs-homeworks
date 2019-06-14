@@ -155,7 +155,7 @@ class Wand extends Weapon {
 
 const wand1 = new Wand(wand);
 
-class LongBow extends Weapon {
+class LongBow extends Bow {
   constructor(obj) {
     super(obj);
     this.attack = 15;
@@ -165,7 +165,7 @@ class LongBow extends Weapon {
 
 const longbow1 = new LongBow(bow);
 
-class Axe extends Weapon {
+class Axe extends Sword {
   constructor(obj) {
     super(obj);
     this.attack = 27;
@@ -175,7 +175,7 @@ class Axe extends Weapon {
 
 const axe1 = new Axe(sword);
 
-class StormWand extends Weapon {
+class StormWand extends Wand {
   constructor(obj) {
     super(obj);
     this.attack = 10;
